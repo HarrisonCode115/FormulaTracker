@@ -1,18 +1,12 @@
+/* General App Styles */
 .App {
   text-align: center;
+  background-color: #1d1f21; /* Dark background for F1 theme */
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Modern font */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* App Header Styling */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,12 +16,16 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ff1e00; /* F1 Red */
+  font-weight: bold;
+  text-decoration: none;
 }
 
+/* Formula One-Themed Logo Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +33,108 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+/* Smaller and Subtle Hamburger Menu */
+.hamburger-menu button {
+  font-size: 25px; /* Smaller size */
+  background-color: transparent;
+  border: none; /* Remove border */
+  color: #ff1e00; /* F1 Red for visibility */
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px; /* Keep on the left */
+  padding: 5px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger-menu button:hover {
+  transform: scale(1.1);
+  color: #ffffff; /* Subtle hover effect */
+}
+
+/* Dropdown Menu Positioned on Left */
+.dropdown {
+  position: absolute;
+  top: 80px;
+  left: 20px; /* Menu on the left side */
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  z-index: 999;
+}
+
+/* Main Dropdown Items (Driver, Constructor) */
+.dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown ul > li {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 1px solid #555;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown ul > li:hover {
+  background-color: #444;
+  color: #ff1e00; /* Highlight with F1 Red */
+}
+
+/* Year Submenu Adjustments (Grid Layout) */
+.submenu {
+  margin-top: 10px;
+  background-color: #222;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #555;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Grid layout for years */
+  gap: 10px; /* Space between items */
+}
+
+.submenu li {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.submenu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.submenu li:hover {
+  background-color: #444;
+  transform: scale(1.05); /* Subtle hover effect */
+  color: #ff1e00; /* Highlight F1 Red on hover */
+}
+
+/* Styling the Home Page Links */
+.homeBody a {
+  color: #ff1e00;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.homeBody a:hover {
+  text-decoration: underline;
 }
