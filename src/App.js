@@ -62,11 +62,11 @@ function HamburgerMenu() {
               {selectedCategory === 'driver' && (
                 <ul className="submenu">
                   {years.map((year) => (
-                    <li key={year}>
                       <Link to={`/driver/${year}`} onClick={() => handleYearSelect(year)}>
+                        <li key={year}>
                         {year}
+                        </li>
                       </Link>
-                    </li>
                   ))}
                 </ul>
               )}
@@ -76,11 +76,11 @@ function HamburgerMenu() {
               {selectedCategory === 'constructor' && (
                 <ul className="submenu">
                   {years.map((year) => (
-                    <li key={year}>
                       <Link to={`/constructor/${year}`} onClick={() => handleYearSelect(year)}>
+                    <li key={year}>
                         {year}
+                        </li>
                       </Link>
-                    </li>
                   ))}
                 </ul>
               )}
@@ -90,11 +90,13 @@ function HamburgerMenu() {
               Extra
               {selectedCategory === 'Extra' && (
                 <ul className="submenu">
-                    <li key="questions">
+                    
                       <Link to={`/question/`}>
+                      <li key="questions">
                         Questions
+                        </li>
                       </Link>
-                    </li>
+                    
                 </ul>
               )}
             </li>

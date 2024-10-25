@@ -9,7 +9,7 @@
 /* App Header Styling */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,6 +60,10 @@
   color: #ffffff; /* Subtle hover effect */
 }
 
+a{
+  text-decoration: none;
+}
+
 /* Dropdown Menu Positioned on Left */
 .dropdown {
   position: absolute;
@@ -88,11 +92,15 @@
   font-weight: bold;
   border-bottom: 1px solid #555;
   transition: background-color 0.2s ease;
+  text-decoration: none;
+
 }
 
 .dropdown ul > li:hover {
   background-color: #444;
   color: #ff1e00; /* Highlight with F1 Red */
+  text-decoration: none;
+
 }
 
 /* Year Submenu Adjustments (Grid Layout) */
@@ -105,6 +113,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Grid layout for years */
   gap: 10px; /* Space between items */
+  text-decoration: none;
+
 }
 
 .submenu li {
@@ -115,17 +125,20 @@
   text-align: center;
   font-weight: bold;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
 .submenu li a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .submenu li:hover {
   background-color: #444;
   transform: scale(1.05); /* Subtle hover effect */
   color: #ff1e00; /* Highlight F1 Red on hover */
+  text-decoration: none;
+
 }
 
 /* Styling the Home Page Links */
@@ -133,8 +146,10 @@
   color: #ff1e00;
   font-weight: bold;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 .homeBody a:hover {
   text-decoration: underline;
 }
+
