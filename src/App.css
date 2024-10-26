@@ -1,19 +1,22 @@
 /* General App Styles */
 .App {
+  display:flex;
+  flex-direction: column;
   text-align: center;
   background-color: #1d1f21; /* Dark background for F1 theme */
   color: white;
   font-family: 'Roboto', sans-serif; /* Modern font */
+  min-height: 100vh;
 }
 
-/* App Header Styling */
-.App-header {
+/* App Main Styling */
+.App-main {
+  flex:1;
   background-color: #282c34;
   min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   position: relative;
@@ -21,7 +24,6 @@
 
 .App-link {
   color: #ff1e00; /* F1 Red */
-  font-weight: bold;
   text-decoration: none;
 }
 
@@ -41,105 +43,11 @@
   animation: App-logo-spin infinite 20s linear;
 }
 
-/* Smaller and Subtle Hamburger Menu */
-.hamburger-menu button {
-  font-size: 25px; /* Smaller size */
-  background-color: transparent;
-  border: none; /* Remove border */
-  color: #ff1e00; /* F1 Red for visibility */
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  left: 20px; /* Keep on the left */
-  padding: 5px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.hamburger-menu button:hover {
-  transform: scale(1.1);
-  color: #ffffff; /* Subtle hover effect */
-}
 
 a{
   text-decoration: none;
 }
 
-/* Dropdown Menu Positioned on Left */
-.dropdown {
-  position: absolute;
-  top: 80px;
-  left: 20px; /* Menu on the left side */
-  background-color: #333;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  font-size: 18px;
-  z-index: 999;
-}
-
-/* Main Dropdown Items (Driver, Constructor) */
-.dropdown ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown ul > li {
-  padding: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  border-bottom: 1px solid #555;
-  transition: background-color 0.2s ease;
-  text-decoration: none;
-
-}
-
-.dropdown ul > li:hover {
-  background-color: #444;
-  color: #ff1e00; /* Highlight with F1 Red */
-  text-decoration: none;
-
-}
-
-/* Year Submenu Adjustments (Grid Layout) */
-.submenu {
-  margin-top: 10px;
-  background-color: #222;
-  border-radius: 5px;
-  padding: 10px;
-  border: 1px solid #555;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Grid layout for years */
-  gap: 10px; /* Space between items */
-  text-decoration: none;
-
-}
-
-.submenu li {
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border-radius: 5px;
-  text-align: center;
-  font-weight: bold;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  text-decoration: none;
-}
-
-.submenu li a {
-  color: #fff;
-  text-decoration: none !important;
-}
-
-.submenu li:hover {
-  background-color: #444;
-  transform: scale(1.05); /* Subtle hover effect */
-  color: #ff1e00; /* Highlight F1 Red on hover */
-  text-decoration: none;
-
-}
 
 /* Styling the Home Page Links */
 .homeBody a {

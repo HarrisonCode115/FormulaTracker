@@ -1,0 +1,28 @@
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 10 equal columns */
+  gap: 2vh; /* Space between buttons */
+  padding: 2vh; /* Padding around the grid */
+  justify-items: center; /* Center items in their grid cells */
+}
+
+.year-button {
+  background-color: #f1f1f1; /* Light gray background */
+  border-radius: 5px; /* Rounded corners */
+  color: #282c34; /* Text color */
+  font-size: 2vw; 
+  text-align: center;
+  justify-content: center;
+  padding: 0; /* Reduced padding inside buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  width: 100%; /* Make buttons fill grid cells but leave some margin */
+  text-align: center; /* Center text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  position: relative; /* Allow for pseudo-elements */
+}
+
+.year-button:hover {
+  color: #f60909; /* Slightly darker gray on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
