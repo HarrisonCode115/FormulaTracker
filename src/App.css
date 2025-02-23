@@ -1,11 +1,22 @@
-/* General App Styles */
+@font-face {
+  font-family: 'CustomF1Font';
+  src: url('/src/assets/Formula1-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'CustomF1Font', sans-serif;
+}
+
+
 .App {
   display:flex;
   flex-direction: column;
   text-align: center;
   background-color: #1d1f21; /* Dark background for F1 theme */
   color: white;
-  font-family: 'Roboto', sans-serif; /* Modern font */
+  font-family: 'CustomF1Font', 'sans-serif'; 
   min-height: 100vh;
 }
 
